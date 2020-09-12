@@ -1,0 +1,83 @@
+body {
+  margin: auto;
+  background: #f6fff6;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(var(--vs-text), 1);
+  margin-bottom: 100px;
+}
+.table {
+  padding: 0 20px;
+}
+.text-left{
+  text-align: left;
+}
+.mr-small {
+  margin-right: 10px;
+}
+.mr-medium {
+  margin-right: 20px;
+}
+.mb-large {
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+}
+.filter {
+  width: 100%;
+  margin: 20px 0;
+}
+.navbar{
+  position: relative;
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden;
+  /*min-height: 85vh;*/
+}
+.heading {
+  font-weight: bold;
+}
+.divider {
+  width: 70%;
+  position: relative;
+  display: block;
+  margin: 25px 0;
+  clear: both;
+  border-top: 1px solid rgba(16, 176, 180, .6);
+}
+.close-sidebar {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.chart-container {
+  position: relative;
+  height: 20vh;
+  width: 10vw;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+/** OVERRIDE **/
+:root {
+  --vs-gray-2: 16, 176, 180;
+  --vs-gray-2: 227, 255, 213;
+}
+.vs-input {
+  padding: 12px 13px;
+}
+.vs-sidebar-content {
+  max-width: 360px;
+}
+.filter .vs-row{
+  flex-flow: nowrap;
+  margin-bottom: 25px;
+  padding: 0 8px;
+}
+.vs-input__label--label{
+  text-transform: capitalize;
+}

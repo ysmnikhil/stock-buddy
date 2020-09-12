@@ -1,0 +1,4 @@
+.idea/
+stock-front/node_modules
+stock-front/dist
+!.gitignore

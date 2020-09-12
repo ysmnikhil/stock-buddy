@@ -1,0 +1,19 @@
+Options +FollowSymlinks
+
+# Prevent Directory listing
+Options -Indexes
+
+# Prevent Direct Access to files
+<FilesMatch "(?i)((\.csv|\.twig|\.ini|\.log|(?<!robots)\.txt))">
+ Require all denied
+## For apache 2.2 and older, replace "Require all denied" with these two lines :
+# Order deny,allow
+# Deny from all
+</FilesMatch>
+
+RewriteBase /
+RewriteRule ^stock-front/(.*) index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+RewriteRule ^([^?]*) index.php [L,QSA]
